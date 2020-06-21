@@ -24,7 +24,7 @@ class SearchBar extends React.Component {
   {
       event.preventDefault();
       //We need to go and and fetch weather data
-        this.props.LocalFetchWeather(this.state.term);
+        this.props.FetchWeather(this.state.term);
         this.setState({term: " "});
   }
   
@@ -51,7 +51,7 @@ class SearchBar extends React.Component {
 
 function MapDispatchToProps(dispatch)
 {
-    return bindActionCreators({LocalFetchWeather:FetchWeather},dispatch);
+    return bindActionCreators({FetchWeather},dispatch);
 }
 
 
